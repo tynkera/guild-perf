@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Smoke Test') {
             steps {
-                bat '%JMETER_HOME%\\bin\\jmeter.bat -n -f -t perf/smoke.jmx -l reports/smoke.jtl -e -o html-report -Jthreads=%THREADS% -Jloops=%LOOPS%'
+                bat '%JMETER_HOME%\\bin\\jmeter.bat -n -f -t perf/smoke.jmx -l reports/smoke.jtl -e -o html-report -Jthreads=10 -Jloops=1'
             }
         }
     }
