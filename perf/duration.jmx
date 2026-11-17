@@ -128,7 +128,7 @@
         </ResultCollector>
         <hashTree/>
         <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion">
-          <stringProp name="DurationAssertion.duration">45</stringProp>
+          <stringProp name="DurationAssertion.duration">2000</stringProp>
         </DurationAssertion>
         <hashTree/>
       </hashTree>
