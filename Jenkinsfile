@@ -10,12 +10,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+		            deleteDir()
                 checkout scm
             }
         }
         stage('Smoke Test') {
             steps {
-                bat '%JMETER_HOME%\\bin\\jmeter.bat -n -f -t perf/smoke.jmx -l reports/smoke.jtl -e -o html-report -Jthreads=%THREADS% -Jloops=%LOOPS%'
+                bat '%JMETER_HOME%\\bin\\jmeter.bat -n -t perf/smoke.jmx -l reports/smoke.jtl -e -o html-report -Jthreads=%THREADS% -Jloops=%LOOPS%'
             }
         }
     }
